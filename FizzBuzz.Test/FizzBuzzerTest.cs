@@ -8,7 +8,9 @@ using System.Threading.Tasks;
 namespace FizzBuzz.Test
 {   [TestFixture]
     class FizzBuzzerTest
-    {   [Test]
+    {
+        //Mikol Hutnik FizzBuzz
+        [Test]
         public void Get_Returns_1_for_1()
         {
             var fizzBuzzer = new FizzBuzzer();
@@ -68,6 +70,24 @@ namespace FizzBuzz.Test
             Assert.That(result, Is.EqualTo("Buzz"));
         }
 
+        [Test]
+        public void Get_Returns_Buzz_for_mul_10()
+        {
+            var fizzBuzzer = new FizzBuzzer();
 
+            var result = fizzBuzzer.Get(10);
+
+            Assert.That(result, Is.EqualTo("Buzz"));
+        }
+
+        [Test]
+        public void Get_Returns_Buzz_for_mul_15()
+        {
+            var fizzBuzzer = new FizzBuzzer();
+
+            var result = fizzBuzzer.Get(15);
+
+            Assert.That(result, Is.EqualTo("FizzBuzz"));
+        }
     }
 }
